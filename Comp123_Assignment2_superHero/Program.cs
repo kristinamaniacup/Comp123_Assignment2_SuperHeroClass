@@ -16,6 +16,18 @@ namespace Comp123_Assignment2_superHero
     {
         static void Main(string[] args)
         {
+            Console.WriteLine();
+            Console.WriteLine("~~~~~~~~~~~~~ SuperHero Class ~~~~~~~~~~~~~~");
+            Console.WriteLine();
+            SuperHero mySuperHero = new SuperHero("Mom");
+            mySuperHero.showPowers();
+            Console.WriteLine();
+            Console.WriteLine("~~~~~~~~~~~~~~~ Hero Class ~~~~~~~~~~~~~~~~~");
+            Console.WriteLine();
+            Hero myHero = new Hero("Dad");
+            myHero.fight();
+            Console.WriteLine("********* Press any key to exit. ***********");
+            Console.ReadKey();
         }
     }
 }
