@@ -25,7 +25,19 @@ namespace Comp123_Assignment2_superHero
         //PRIVATE METHODS +++++++++++
         private void generateRandomPowers()
         {
- 
+            int power = 0;
+            while (power < finalSuperPowers.Length)
+            {
+                randomPower = generateRandomNum(rnd);
+                if (superPowers[randomPower] != "Opps! Unavailable. Re-roll.")
+                {
+                    finalSuperPowers[power] = superPowers[randomPower];
+
+                    superPowers[randomPower] = "Opps! Unavailable. Re-roll.";
+
+                    power++;
+                }
+            }
         }
 
         private static int generateRandomNum(Random rnd)
@@ -39,12 +51,12 @@ namespace Comp123_Assignment2_superHero
         //PUBLIC METHODS ++++++++++++
         public void showPowers()
         {
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine("********************************************");
+            Console.WriteLine("************* Super Powers *****************");
+            Console.WriteLine("First Super Power is: {0}", finalSuperPowers[0]);
+            Console.WriteLine("Second Super Power is: {0}", finalSuperPowers[1]);
+            Console.WriteLine("Third Super Power is: {0}", finalSuperPowers[2]);
+            Console.WriteLine("********************************************");
         }
     }
 }
